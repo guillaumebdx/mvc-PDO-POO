@@ -5,17 +5,19 @@
  */
 class Quest
 {
-    private $_score;
-    private $_name;
-    private $_course;
+    public $_score;
+    public $_name;
+    public $_course;
+    public $_id;
 
 
 
-    public function __construct($score, $name, $course)
+    public function __construct($score, $name, $course, $id)
     {
         $this->setScore($score);
         $this->setName($name);
         $this->setCourse($course);
+        $this->setId($id);
 
     }
 //setter
@@ -30,7 +32,9 @@ class Quest
     public function setCourse($course) {
         $this->_course = $course;
     }
-
+    public function setId($id) {
+        $this->_id = $id;
+    }
 
 //getter
 /*
